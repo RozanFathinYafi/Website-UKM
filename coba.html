@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="coba.css">    
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Feather Icons CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<!-- carousel -->
+<body class="sidebar-hidden">
+  <button
+    class="sidebar-toggle-btn"
+    aria-label="Toggle Sidebar"
+    aria-expanded="false"
+    aria-controls="sidebar-menu"
+  >
+    &#9776;
+  </button>
+
+  <aside
+    class="sidebar"
+    id="sidebar-menu"
+    role="navigation"
+    aria-label="Primary Sidebar Navigation"
+  >
+  <div class="logo" tabindex="0">
+    <img src="img/logo.png" alt="Logo Toko Getuk" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 8px; border-radius: 50%;" />
+    <span style="vertical-align: middle;">Getuk!</span>
+  </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+       
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Menggunakan Feather Icon untuk Tombol Pencarian -->
+<div class="search-wrapper">
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Cari menu..." aria-label="Search" />
+    <!-- Tombol Pencarian dengan Ikon -->
+    <button onclick="searchMenu()" aria-label="Search Button">
+      <i data-feather="search"></i>
+    </button>
+  </div>
+</div>
+
+
+
+
+  <main class="main-content" id="home">
+    <section id="about" class="about" style="width: 100%; max-width: 700px;">
+      <div
+        class="carousel about-carousel"
+        role="region"
+        aria-label="Tentang Kami Carousel"
+      >
+        <div
+          class="carousel-slide active"
+          style="background-image: url('img/getuk goreng.jpg');"
+        >
+          <div class="carousel-caption">Getuk Goreng</div>
+        </div>
+        <div
+          class="carousel-slide"
+          style="background-image: url('img/getuk keju.jpeg');"
+        >
+          <div class="carousel-caption">Getuk Keju</div>
+        </div>
+        <div
+          class="carousel-slide"
+          style="background-image: url('img/getuk pisang.jpeg');"
+        >
+          <div class="carousel-caption">Getuk Pisang</div>
+        </div>
+
+        <button class="carousel-control prev" aria-label="Sebelumnya">&#10094;</button>
+        <button class="carousel-control next" aria-label="Berikutnya">&#10095;</button>
+
+        <div class="carousel-indicators" role="tablist">
+          <button
+            class="active"
+            aria-label="Slide 1"
+            aria-selected="true"
+            role="tab"
+          ></button>
+          <button aria-label="Slide 2" role="tab"></button>
+          <button aria-label="Slide 3" role="tab"></button>
+        </div>
+      </div>
+
+     
+    </section>
+    
+<!-- end carousel -->
+<!-- Tombol Keranjang -->
+<button id="cartButton" onclick="toggleCart()" aria-label="Tampilkan Keranjang">
+  Keranjang (Rp <span id="cartTotal">0</span>)
+</button>
+
+<!-- Modal Keranjang -->
+<div class="cart-modal" id="cartModal" style="display: none;">
+  <div class="cart-content">
+    <h3>Keranjang Belanja</h3>
+    <ul id="cartItems"></ul>
+    <div class="cart-total">
+      <strong>Total: Rp <span id="cartTotalModal">0</span></strong>
+    </div>
+
+    <!-- Tombol Checkout -->
+    <button onclick="checkout()">Checkout</button>
+    <button onclick="toggleCart()">Tutup</button>
+  </div>
+</div>
+
+<!-- Menu Makanan Section -->
+<section id="menu">
+  <h2>Produck Kami Bisa Di Jual Online</h2>
+  <div class="cards-container" role="list">
+    <div class="card" role="listitem" tabindex="0">
+      <img src="img/kripik getuk.jpeg" alt="Kripik Getuk" />
+      <div class="card-content">
+        <div class="card-title">Kripik Getuk</div>
+        <div class="card-description">
+         Kripik getuk adalah camilan khas Indonesia yang terbuat dari tepung ketan yang dibentuk tipis dan digoreng hingga renyah. 
+        </div>
+        <div class="card-price">Rp 13000</div>
+       <button onclick="addToCart({name: 'kripik getuk', price: 13000})" aria-label="Tambah ke Keranjang">
+  <i data-feather="shopping-cart"></i>
+</button>
+
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0">
+      <img src="img/lanting udang.jpeg" alt="lanting udang" />
+      <div class="card-content">
+        <div class="card-title">Lanting Udang</div>
+        <div class="card-description">
+         kami juga mejual selain produk getuk yaitu lanting udang terbuat dari udang di laut enak dan gurih.
+        </div>
+         <div class="card-price">Rp 18000</div>
+      <button onclick="addToCart({name: 'lanting udang', price: 18000})" aria-label="Tambah ke Keranjang">
+  <i data-feather="shopping-cart"></i>
+</button>
+
+      </div>
+    </div>
+    <div class="card" role="listitem" tabindex="0">
+      <img src="img/Lanting singkong.jpg" alt="lanting singkong" />
+      <div class="card-content">
+        <div class="card-title">Lanting Singkong</div>
+        <div class="card-description">
+          Lanting terbuat dari singkong sama dengan getuk rasa juga sama enaknyoo
+        </div>
+         <div class="card-price">Rp 12000</div>
+        <button onclick="addToCart({name: 'lanting singkong', price: 12000})" aria-label="Tambah ke Keranjang">
+  <i data-feather="shopping-cart"></i>
+</button>
+
+      </div>
+    </div>
+     <div class="card" role="listitem" tabindex="0">
+      <img src="img/lanting kebumen pedas.jpg" alt="lanting pedas" />
+      <div class="card-content">
+        <div class="card-title">Lanting pedas</div>
+        <div class="card-description">
+       Lanting asal dari kebumen dan sudah di campurin bubuk pedas.
+        </div>
+         <div class="card-price">Rp 11000</div>
+      <button onclick="addToCart({name: 'lanting pedas', price: 11000})" aria-label="Tambah ke Keranjang">
+  <i data-feather="shopping-cart"></i>
+</button>
+
+      </div>
+    </div>
+ <div class="card" role="listitem" tabindex="0">
+      <img src="img/lanting cassava.jpg" alt="lanting cassava" />
+      <div class="card-content">
+        <div class="card-title">Lanting cassava</div>
+        <div class="card-description">
+         kami juga mejual selain produk getuk yaitu lanting cassava terbuat dari singkong dan gurih.
+        </div>
+         <div class="card-price">Rp 10000</div>
+      <button onclick="addToCart({name: 'lanting cassava', price: 10000})" aria-label="Tambah ke Keranjang">
+  <i data-feather="shopping-cart"></i>
+</button>
+
+      </div>
+    </div>
+ <div class="card" role="listitem" tabindex="0">
+      <img src="img/lanting kebumen.jpeg" alt="lanting kebumen" />
+      <div class="card-content">
+        <div class="card-title">Lanting kebumen</div>
+        <div class="card-description">
+        Lanting Khas kebumen.
+        </div>
+         <div class="card-price">Rp 10000</div>
+      <button onclick="addToCart({name: 'lanting ke', price: 10000})" aria-label="Tambah ke Keranjang">
+  <i data-feather="shopping-cart"></i>
+</button>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <footer id="toko">
+    <div class="socials">
+      <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+      <a href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang Toko Getuk</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">Rozan Fathin Yafi</a>. | &copy; 2025.</p>
+    </div>
+  </footer>
+
+  
+
+
+
+    <script src="coba.js"></script>
+</body>
+</html>

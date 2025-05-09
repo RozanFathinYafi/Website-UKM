@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website with Sidebar, Carousel and Menu Cards</title>
+
+  <!-- Fonts -->
+   <link rel="stylesheet" href="home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Feather Icons CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <style>
+   
+  </style>
+</head>
+
+<body class="sidebar-hidden">
+  <button
+    class="sidebar-toggle-btn"
+    aria-label="Toggle Sidebar"
+    aria-expanded="false"
+    aria-controls="sidebar-menu"
+  >
+    &#9776;
+  </button>
+
+  <aside
+    class="sidebar"
+    id="sidebar-menu"
+    role="navigation"
+    aria-label="Primary Sidebar Navigation"
+  >
+  <div class="logo" tabindex="0">
+    <img src="img/logo.png" alt="Logo Toko Getuk" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 8px; border-radius: 50%;" />
+    <span style="vertical-align: middle;">Getuk!</span>
+  </div>
+    <nav>
+      <ul>
+        <li><a href="#menu" tabindex="0">Menu Makanan</a></li>
+        <li><a href="#contact" tabindex="0">Kontak</a></li>
+       <li><a href="coba.html">Produk Kita</a></li>
+
+
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content" id="home">
+    <section id="about" class="about" style="width: 100%; max-width: 700px;">
+      <div
+        class="carousel about-carousel"
+        role="region"
+        aria-label="Tentang Kami Carousel"
+      >
+        <div
+          class="carousel-slide active"
+          style="background-image: url('img/getuk goreng.jpg');"
+        >
+          <div class="carousel-caption">Getuk Goreng</div>
+        </div>
+        <div
+          class="carousel-slide"
+          style="background-image: url('img/getuk keju.jpeg');"
+        >
+          <div class="carousel-caption">Getuk Keju</div>
+        </div>
+        <div
+          class="carousel-slide"
+          style="background-image: url('img/getuk pisang.jpeg');"
+        >
+          <div class="carousel-caption">Getuk Pisang</div>
+        </div>
+
+        <button class="carousel-control prev" aria-label="Sebelumnya">&#10094;</button>
+        <button class="carousel-control next" aria-label="Berikutnya">&#10095;</button>
+
+        <div class="carousel-indicators" role="tablist">
+          <button
+            class="active"
+            aria-label="Slide 1"
+            aria-selected="true"
+            role="tab"
+          ></button>
+          <button aria-label="Slide 2" role="tab"></button>
+          <button aria-label="Slide 3" role="tab"></button>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 2rem;"><span>Tentang</span> Toko Getuk</h2>
+      <div class="content">
+        <h3>Kenapa memilih getuk kami?</h3>
+        <p>
+        "Getuk kami dibuat dari bahan-bahan pilihan berkualitas tinggi dan diolah secara higienis dengan resep tradisional yang sudah teruji rasa. Teksturnya lembut, rasanya otentik, dan tidak menggunakan bahan pengawet, sehingga aman dan lezat untuk dinikmati kapan saja. Kami menjaga cita rasa khas sambil memastikan produk selalu segar dan memuaskan lidah konsumen."
+        </p>
+        <p>
+          "Kenapa pilih getuk kami? Karena rasanya nggak bohong! Lembut, manis pas, dan dibuat dari bahan alami tanpa pengawet. Sekali coba, dijamin nagih! Camilan tradisional rasa kekinian yang siap nemenin harimu!"
+        </p>
+      </div>
+    </section>
+
+    <!-- Menu Makanan Section -->
+    <section id="menu">
+      <h2>Menu Makanan</h2>
+      <div class="cards-container" role="list">
+        <div class="card" role="listitem" tabindex="0">
+          <img src="img/getuk goreng.jpg" alt="Getuk Goreng" />
+          <div class="card-content">
+            <div class="card-title">Getuk Goreng</div>
+            <div class="card-description">
+              Getuk goreng renyah dan lezat dengan cita rasa tradisional.
+            </div>
+          </div>
+        </div>
+
+        <div class="card" role="listitem" tabindex="0">
+          <img src="img/getuk keju.jpeg" alt="Getuk Keju" />
+          <div class="card-content">
+            <div class="card-title">Getuk Keju</div>
+            <div class="card-description">
+              Getuk manis dengan topping keju creamy yang menggoda.
+            </div>
+          </div>
+        </div>
+
+        <div class="card" role="listitem" tabindex="0">
+          <img src="img/getuk pisang.jpeg" alt="Getuk Pisang" />
+          <div class="card-content">
+            <div class="card-title">Getuk Pisang</div>
+            <div class="card-description">
+              Perpaduan getuk dan pisang yang lezat dan segar.
+            </div>
+          </div>
+        </div>
+
+          <div class="card" role="listitem" tabindex="0">
+          <img src="img/getuk-gulung-merah.jpg" alt="Getuk Goreng" />
+          <div class="card-content">
+            <div class="card-title">Getuk gulung merah</div>
+            <div class="card-description">
+              Getuk goreng renyah dan lezat dengan cita rasa tradisional.
+            </div>
+          </div>
+        </div>
+
+          <div class="card" role="listitem" tabindex="0">
+          <img src="img/getuk trio.webp" alt="Getuk Trio" />
+          <div class="card-content">
+            <div class="card-title">Getuk Trio</div>
+            <div class="card-description">
+              Getuk goreng renyah dan lezat dengan cita rasa tradisional.
+            </div>
+          </div>
+        </div>
+
+          <div class="card" role="listitem" tabindex="0">
+          <img src="img/Getuk-Lindri-768x960.jpg" alt="Getuk Goreng" />
+          <div class="card-content">
+            <div class="card-title">Getuk lendir
+            </div>
+            <div class="card-description">
+              Getuk goreng renyah dan lezat dengan cita rasa tradisional.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section with Maps -->
+    <section id="contact">
+      <h2>Kontak Kami</h2>
+      <p>Anda dapat menghubungi kami melalui form di bawah ini atau melihat lokasi toko kami di peta.</p>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.203465834882!2d109.6486179147751!3d-7.734710994431701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e706e0283773185%3A0x1cb8cba74578c419!2sKebumen%2C%20Central%20Java%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1686285179161!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Google Map of Kebumen"
+          style="border:0;"
+        ></iframe>
+        <form aria-label="Contact Form">
+          <input type="text" placeholder="Nama" aria-label="Nama" required />
+          <input type="email" placeholder="Email" aria-label="Email" required />
+          <textarea placeholder="Pesan" aria-label="Pesan" required></textarea>
+          <button type="submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="toko">
+    <div class="socials">
+      <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+      <a href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang Toko Getuk</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">Rozan Fathin Yafi</a>. | &copy; 2025.</p>
+    </div>
+  </footer>
+
+  <script src="hoem.js"></script>
+   
+  
+</body>
+</html>
